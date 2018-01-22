@@ -1,0 +1,16 @@
+<resources xmlns:android="http://schemas.android.com/tools">
+    <string name="app_name">LalitDev</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="txt_register"><u>Rrgister the new Account</u></string>
+    <string name="debetors">Dedetors</string>
+    <string name="creditor">Dedetors</string>
+
+
+    <string name="facebook_app_id">1938721529788707</string>
+    <string name="google_map_api_key">AIzaSyDOBlicfEHOy8ftRvldRXKCqtAtdcq4FWY</string>
+
+
+    <string name="com.twitter.sdk.android.CONSUMER_KEY" >lCjTRj7twcbG7LE6WUJT3lQaj</string>
+    <string name="com.twitter.sdk.android.CONSUMER_SECRET" >7HlOAU6RyAlQMqn8hrY8kPQq0NCgBohMHnxDZRtkPeIRSmjmxV</string>
+</resources>

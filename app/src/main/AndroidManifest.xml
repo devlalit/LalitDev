@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.lalit.lalitdev">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/splash_screen_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".SplashScreen.SplashScreen1">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".Login.LoginActivity" />
+        <activity android:name=".RecyclerViewDemo.RecyclerViewActivity" />
+        <activity android:name=".NavigationView.NavigationViewDemo" />
+        <activity android:name=".NavigationView.NavigationViewInbuild" />
+        <activity android:name=".TabViewWithDrawerLayout.TabviewdraweLayout" />
+        <activity android:name=".Fragment.SearchViewFragment" />
+        <activity android:name=".LazyLoadingDemo.Activity.LazyLoaderActivity" />
+        <activity android:name=".BarChart.Activity.BarCartActivity" />
+        <activity android:name=".SqliteDataBase.FunctinalityInSqliteDataBaseActivity" />
+        <activity android:name=".SqliteDataBase.CountryListActivity" />
+        <activity android:name=".CustomSwapeRecyclerview.Adapter.CustomSwapeRecyclerViewActivity" />
+        <activity android:name=".CustomSwapeRecyclerview.Activity.RecyclerDemoActivity" />
+        <activity android:name=".StaticNotificatioDemo.Fragment.StaticNotificationActivity" />
+        <activity android:name=".BarChart.Activity.CustomPieChartActivity"/>
+        <activity android:name=".PageViewerSwapLayoutDemo.Activity.ViewerPagerActivity"/>
+        <activity android:name=".LazyLoadingDemo2.Activity.LazyLoadingDemo2"/>
+        <activity android:name=".FacebookIntegrationDemo.Activity.FaceBookDemoActivity"/>
+        <activity android:name=".SimpleRecyclerviewExample.Actvity.SimpleRecyclerviewActivity"/>
+        <activity android:name=".GoogleMapDemo.Activity.GoogleMapDemoActivity"/>
+        <activity android:name=".TwitterLoginDemo.Activity.LoginWithTwitterDemoActivity"/>
+        <activity android:name=".GooglePlusDemo.Activity.GooglePlusDemoActivity"/>
+        <activity android:name=".GCMNotificationDemo.Activity.GCMNotificationActivity"/>
+        <activity android:name=".VolleyDemo.Activity.VolleyDemoActivity"/>
+        <receiver android:name=".Receiver.DateTimeChangeReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.DATE_CHANGED" />
+                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+                <action android:name="android.intent.action.TIME_SET" />
+            </intent-filter>
+        </receiver>
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_map_api_key" />
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="42f27be9454e793646d7770bbbb4462ea184e4e5" />
+        <!--
+           GCM Receiver
+       -->
+        <receiver
+            android:name="com.google.android.gms.gcm.GcmReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+                <category android:name="com.gnirt69.gcmexample"/>
+            </intent-filter>
+        </receiver>
+
+        <!--
+            GCM Receiver Service
+        -->
+        <service android:name=".GCMNotificationDemo.Service.GCMPushReceiverService" android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+            </intent-filter>
+        </service>
+
+        <!--
+            GCM Registration Intent Service
+        -->
+        <service android:name=".GCMNotificationDemo.Service.GCMRegistrationIntentService" android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.gms.iid.InstanceID"/>
+            </intent-filter>
+        </service>
+
+
+
+    </application>
+
+</manifest>

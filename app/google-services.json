@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "337738319597",
+    "project_id": "lalitdev-1515404838071"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:337738319597:android:68fb81855a8d0959",
+        "android_client_info": {
+          "package_name": "com.example.lalit.lalitdev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "337738319597-amfquef6ff0enjctavjf0otaaloi10bv.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "337738319597-tfe2h2cigp9at6gernjla04a2mvq7kn0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.lalit.lalitdev",
+            "certificate_hash": "1c3aca5917fbb127ab69dcae6cb3d7bf0c303188"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBWaIHV0AhOsZYbD8jZ2HxMeWrSWJUfIzU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
