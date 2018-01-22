@@ -16,7 +16,7 @@ public class ActivityClassStructure extends Activity {
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_fragmentclasstructure_layout);
-        //Get User records from SQLite DB
+
         initViews();
     }
       public  void initViews(){
