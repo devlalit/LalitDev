@@ -53,7 +53,7 @@ public class SplashScreen1 extends AppCompatActivity {
 
         new CountDownTimer(5000, 1000) {
             public void onFinish() {
-                Intent startActivity = new Intent(SplashScreen1.this,VolleyDemoActivity.class);
+                Intent startActivity = new Intent(SplashScreen1.this,NavigationViewDemo.class);
                 startActivity(startActivity);
                 finish();
             }

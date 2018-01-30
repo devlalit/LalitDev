@@ -41,6 +41,7 @@
         <activity android:name=".GooglePlusDemo.Activity.GooglePlusDemoActivity"/>
         <activity android:name=".GCMNotificationDemo.Activity.GCMNotificationActivity"/>
         <activity android:name=".VolleyDemo.Activity.VolleyDemoActivity"/>
+        <activity android:name=".ActivitieClassStructure.ActivityClassStructure"/>
         <receiver android:name=".Receiver.DateTimeChangeReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.DATE_CHANGED" />

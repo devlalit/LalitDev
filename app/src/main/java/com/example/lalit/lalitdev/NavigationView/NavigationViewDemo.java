@@ -1,6 +1,8 @@
 package com.example.lalit.lalitdev.NavigationView;
 
 import android.app.Activity;
+import android.app.Fragment;
+import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
@@ -11,6 +13,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
+import com.example.lalit.lalitdev.Fragment.Paramount2;
+import com.example.lalit.lalitdev.FragmentClassStructure.FragmentClassStructure;
 import com.example.lalit.lalitdev.R;
 
 /**
@@ -26,14 +30,10 @@ public class NavigationViewDemo extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_navigation_view);
-
-
         // Initializing Toolbar and setting it as the actionbar
         toolbar = (Toolbar) findViewById(R.id.toolbar);
-
         //Initializing NavigationView
         navigationView = (NavigationView) findViewById(R.id.navigation_view);
-
         //Setting Navigation View Item Selected Listener to handle the item click of the navigation menu
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
 
@@ -50,16 +50,6 @@ public class NavigationViewDemo extends AppCompatActivity {
 
                 //Check to see which item was being clicked and perform appropriate action
                 switch (menuItem.getItemId()){
-
-
-                    //Replacing the main content with ContentFragment Which is our Inbox View;
-                  /*  case R.id.inbox:
-                        Toast.makeText(getApplicationContext(),"Inbox Selected",Toast.LENGTH_SHORT).show();
-                      *//*  ContentFragment fragment = new ContentFragment();
-                        android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-                        fragmentTransaction.replace(R.id.frame,fragment);
-                        fragmentTransaction.commit();*//*
-                        return true;*/
                     default:
                         Toast.makeText(getApplicationContext(),"Somethings Wrong",Toast.LENGTH_SHORT).show();
                         return true;
@@ -85,5 +75,12 @@ public class NavigationViewDemo extends AppCompatActivity {
         drawerLayout.setDrawerListener(actionBarDrawerToggle);
         //calling sync state is necessay or else your hamburger icon wont show up
         actionBarDrawerToggle.syncState();
+
+        // Create new fragment and transaction
+        Fragment newFragment = new NavigationFragmentClass();
+        FragmentTransaction transaction = getFragmentManager().beginTransaction();
+        transaction.replace(R.id.frame, newFragment);
+        transaction.addToBackStack(null);
+        transaction.commit();
     }
 }
